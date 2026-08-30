@@ -27,3 +27,4 @@ tzdata==2026.3
 uvicorn==0.52.4
 passlib==1.7.4
 bcrypt==4.0.1
+python-jose==3.5.0
