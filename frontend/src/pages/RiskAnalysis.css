@@ -1,0 +1,436 @@
+/* =========================
+   RISK ANALYSIS PAGE
+========================= */
+
+.risk-analysis-page {
+   width: 100%;
+}
+
+.risk-header {
+   margin-bottom: 25px;
+}
+
+.risk-header h1 {
+   margin: 0;
+   font-size: 28px;
+   color: #111827;
+}
+
+.risk-header p {
+   margin: 7px 0 0;
+   color: #6b7280;
+   font-size: 14px;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.risk-layout {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 22px;
+   align-items: start;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.risk-card {
+   background: white;
+   border: 1px solid #e5e7eb;
+   border-radius: 12px;
+   padding: 25px;
+
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.risk-card h2 {
+   margin: 0;
+   font-size: 19px;
+   color: #111827;
+}
+
+.card-description {
+   margin: 7px 0 22px;
+   color: #6b7280;
+   font-size: 13px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+   margin-bottom: 18px;
+}
+
+.form-group label {
+   display: block;
+   margin-bottom: 7px;
+
+   color: #374151;
+   font-size: 13px;
+   font-weight: 600;
+}
+
+.form-group input {
+   width: 100%;
+   height: 43px;
+
+   padding: 0 12px;
+
+   border: 1px solid #d1d5db;
+   border-radius: 7px;
+
+   outline: none;
+
+   color: #111827;
+   background: white;
+
+   font-size: 13px;
+}
+
+.form-group input:focus {
+   border-color: #2563eb;
+   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+.form-group input::placeholder {
+   color: #9ca3af;
+}
+
+/* =========================
+   CHECKBOXES
+========================= */
+
+.checkbox-section {
+   display: flex;
+   flex-direction: column;
+   gap: 11px;
+
+   margin: 22px 0;
+}
+
+.checkbox-item {
+   display: flex;
+   align-items: flex-start;
+   gap: 11px;
+
+   padding: 12px;
+
+   border: 1px solid #e5e7eb;
+   border-radius: 8px;
+
+   cursor: pointer;
+   transition: 0.2s;
+}
+
+.checkbox-item:hover {
+   background: #f9fafb;
+   border-color: #cbd5e1;
+}
+
+.checkbox-item input {
+   width: 17px;
+   height: 17px;
+
+   margin-top: 2px;
+
+   accent-color: #2563eb;
+}
+
+.checkbox-item span {
+   color: #374151;
+   font-size: 13px;
+   font-weight: 600;
+}
+
+.checkbox-item small {
+   display: block;
+   margin-top: 3px;
+
+   color: #9ca3af;
+   font-size: 11px;
+   font-weight: 400;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.form-actions {
+   display: flex;
+   gap: 10px;
+   margin-top: 25px;
+}
+
+.analyze-button,
+.reset-button {
+   min-height: 42px;
+   padding: 0 18px;
+
+   border-radius: 7px;
+
+   font-size: 13px;
+   font-weight: 600;
+
+   transition: 0.2s;
+}
+
+.analyze-button {
+   flex: 1;
+
+   border: none;
+   background: #2563eb;
+   color: white;
+}
+
+.analyze-button:hover:not(:disabled) {
+   background: #1d4ed8;
+}
+
+.analyze-button:disabled {
+   opacity: 0.6;
+   cursor: not-allowed;
+}
+
+.reset-button {
+   border: 1px solid #d1d5db;
+   background: white;
+   color: #374151;
+}
+
+.reset-button:hover {
+   background: #f9fafb;
+}
+
+/* =========================
+   EMPTY RESULT
+========================= */
+
+.result-empty {
+   min-height: 350px;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   text-align: center;
+}
+
+.result-icon {
+   width: 65px;
+   height: 65px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   margin-bottom: 15px;
+
+   border-radius: 50%;
+
+   background: #eff6ff;
+   color: #2563eb;
+
+   font-size: 18px;
+   font-weight: 700;
+}
+
+.result-empty h3 {
+   margin: 0 0 7px;
+   color: #374151;
+   font-size: 17px;
+}
+
+.result-empty p {
+   max-width: 280px;
+   margin: 0;
+
+   color: #9ca3af;
+   font-size: 13px;
+   line-height: 1.5;
+}
+
+/* =========================
+   RESULT
+========================= */
+
+.result-main {
+   padding: 18px;
+
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   background: #f9fafb;
+   border-radius: 9px;
+
+   margin-bottom: 18px;
+}
+
+.result-label {
+   color: #6b7280;
+   font-size: 13px;
+   font-weight: 600;
+}
+
+.result-risk {
+   padding: 7px 13px;
+   border-radius: 20px;
+
+   font-size: 11px;
+   font-weight: 800;
+}
+
+.result-risk.low {
+   background: #dcfce7;
+   color: #166534;
+}
+
+.result-risk.medium {
+   background: #fef3c7;
+   color: #92400e;
+}
+
+.result-risk.high {
+   background: #fee2e2;
+   color: #991b1b;
+}
+
+/* =========================
+   RESULT GRID
+========================= */
+
+.result-grid {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 12px;
+
+   margin-bottom: 20px;
+}
+
+.result-item {
+   padding: 15px;
+
+   border: 1px solid #e5e7eb;
+   border-radius: 8px;
+}
+
+.result-item span {
+   display: block;
+
+   margin-bottom: 8px;
+
+   color: #6b7280;
+   font-size: 11px;
+}
+
+.result-item strong {
+   color: #111827;
+   font-size: 20px;
+}
+
+/* =========================
+   DECISION
+========================= */
+
+.result-item .decision.approve,
+.decision.approved {
+   color: #15803d;
+}
+
+.result-item .decision.review {
+   color: #b45309;
+}
+
+.result-item .decision.block,
+.result-item .decision.blocked {
+   color: #dc2626;
+}
+
+/* =========================
+   EXPLANATION
+========================= */
+
+.explanation-box {
+   padding: 18px;
+
+   background: #f9fafb;
+   border-radius: 9px;
+}
+
+.explanation-box h3 {
+   margin: 0 0 8px;
+
+   color: #374151;
+   font-size: 14px;
+}
+
+.explanation-box p {
+   margin: 0;
+
+   color: #6b7280;
+   font-size: 13px;
+   line-height: 1.6;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.analysis-error {
+   padding: 15px;
+
+   background: #fef2f2;
+   border: 1px solid #fecaca;
+
+   border-radius: 8px;
+
+   color: #991b1b;
+}
+
+.analysis-error strong {
+   font-size: 13px;
+}
+
+.analysis-error p {
+   margin: 6px 0 0;
+   font-size: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+   .risk-layout {
+      grid-template-columns: 1fr;
+   }
+}
+
+@media (max-width: 600px) {
+   .risk-card {
+      padding: 18px;
+   }
+
+   .risk-header h1 {
+      font-size: 24px;
+   }
+
+   .result-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .form-actions {
+      flex-direction: column;
+   }
+
+   .analyze-button,
+   .reset-button {
+      width: 100%;
+   }
+}
